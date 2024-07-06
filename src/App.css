@@ -83,3 +83,20 @@ section#contenido{
   border-radius: 5px;
   cursor: pointer;
 }
+
+#tableButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+#tableButtons button {
+  background: #eee4e4;
+  color: #000;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

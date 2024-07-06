@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ebay/nice-form-react": "^2.0.2",
+    "@ebay/nice-modal-react": "^1.2.13",
     "@material-design-icons/font": "^0.14.13",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",

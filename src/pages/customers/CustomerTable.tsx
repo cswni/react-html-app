@@ -13,28 +13,52 @@ const CustomerTable = () => {
          fetchData();
      }, []);
 
+    interface Row {
+        id: number;
+        nombre: string;
+        codigo: string;
+        precio: string;
+        disponible: string;
+    }
     
+    const editarCustomer = (id: number) => () => {
+        alert(id);
+    }
+
+    const eliminarCustomer = (id: number) => () => {
+        alert(id);
+    }
+
     const columns = [
         {
             name: "ID",
-            selector: row => row.id
+            selector: (row: Row) => row.id
         },
         {
             name: "Nombre",
-            selector: row => row.nombre
+            selector: (row: Row) => row.nombre
         },
         {
             name: "Código",
-            selector: row => row.codigo
+            selector: (row: Row) => row.codigo
         },
         {
             name: "Precio",
-            selector: row => row.precio
+            selector: (row: Row) => row.precio
         },
         {
             name: "Disponible",
-            selector: row => row.disponible
+            selector: (row: Row) => row.disponible
         },
+        
+        {
+            name: "Acciones",
+            cell: (row: Row) => <><div id='tableButtons'>
+                <button onClick={editarCustomer(row.id)} className="btn btn-primary"><i className="material-icons-outlined">edit</i></button>
+                <button onClick={eliminarCustomer(row.id)} className="btn btn-primary"><i className="material-icons-outlined">delete_forever</i></button>
+            </div>
+            </>
+        }
     ];
 
 
